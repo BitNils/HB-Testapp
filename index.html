@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>ALIKE Testing-Bingo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--
+  Hinweis: Titel, Spielregeln und Testszenarien werden NICHT hier im HTML
+  gepflegt, sondern zentral im CONFIG-Objekt in app.js (siehe Kommentar
+  "ZENTRALE KONFIGURATION" am Dateianfang). Dort einfach Text/Karten ändern.
+-->
+
+<header class="app-header">
+  <img src="assets/hochbahn-logo.svg" alt="HOCHBAHN" class="logo" onerror="this.style.display='none'">
+  <h1 id="appTitle">Testing-Bingo</h1>
+  <div id="rulesText" class="rules-text"></div>
+</header>
+
+<main>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+    <span id="progressText" class="progress-text">0 / 16</span>
+  </div>
+
+  <div id="grid" class="grid"></div>
+
+  <button id="resetBtn" class="reset-btn">Fortschritt zurücksetzen</button>
+</main>
+
+<div id="winModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>🎉 Geschafft!</h2>
+	<p>
+	  Du hast alle Testszenarien abgeschlossen und das komplette Bild freigeschaltet.
+	  Mache einen Screenshot und sende uns diesen an
+	  <a href="mailto:alike@hochbahn.de">alike@hochbahn.de</a>.
+	</p>
+    <img id="fullImage" src="assets/winner.jpg" alt="Gewinnerbild" class="full-image">
+    <button id="closeModal" class="reset-btn">Schließen</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

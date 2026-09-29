@@ -1,0 +1,230 @@
+:root {
+  --brand-red: rgb(223,28,42);
+  --brand-teal: rgb(84,211,200);
+  --brand-green: rgb(24,116,93);
+  --brand-orange: rgb(240,134,80);
+  --brand-blue: rgb(40,155,239);
+  --brand-purple: rgb(81,80,180);
+  --brand-sand: rgb(216,194,148);
+  --font-black: rgb(70,18,52);
+  --bg: #f4f4f6;
+  --card-bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--font-black);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px 16px 10px;
+}
+
+.app-header .logo {
+  max-height: 32px;
+  margin-bottom: 6px;
+}
+
+.app-header h1 {
+  margin: 4px 0 4px;
+  font-size: 1.5rem;
+  color: var(--brand-red);
+  letter-spacing: 0.5px;
+}
+
+.rules-text {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 14px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #444;
+  text-align: left;
+}
+
+.rules-text p {
+  margin: 0 0 8px;
+}
+
+.rules-text p:last-child {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: var(--brand-red);
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 12px 40px;
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--brand-red), var(--brand-orange));
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+  color: var(--font-black);
+}
+
+.grid {
+  --cols: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  gap: 8px;
+}
+
+.card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  perspective: 800px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(.4,.2,.2,1);
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front {
+  background: var(--card-bg);
+  border: 2px solid var(--brand-red);
+  padding: 6px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--font-black);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  /* Sorgt dafür, dass auch lange Wörter (z.B. "Friedrich-Ebert-Damm",
+     "Wandsbeker Chaussee") innerhalb der Karte umbrechen statt
+     überzulaufen oder die Karte zu sprengen. */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+}
+
+.card.flash .card-inner {
+  animation: flashPulse 0.6s ease;
+}
+
+@keyframes flashPulse {
+  0%   { filter: brightness(1); }
+  30%  { filter: brightness(1.9); }
+  100% { filter: brightness(1); }
+}
+
+.card.just-flipped .card-back::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.9);
+  animation: fadeFlash 0.6s ease forwards;
+}
+
+@keyframes fadeFlash {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.reset-btn {
+  display: block;
+  margin: 26px auto 0;
+  background: none;
+  border: 1px solid var(--brand-red);
+  color: var(--brand-red);
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.reset-btn:active {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal.hidden { display: none; }
+
+.modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: var(--brand-red);
+  margin-top: 0;
+}
+
+.full-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 12px 0;
+}
