@@ -15,7 +15,7 @@ const CONFIG = {
   // Regeltext (Spielregeln). \n erzeugt einen Absatz-/Zeilenumbruch.
   // Wird 1:1 (mit Zeilenumbrüchen) unter dem Titel angezeigt.
   rulesText:
-`Teste die angegebenen Szenarien im Zeitraum 6.-9.10. Nach jedem erfolgreichen Test musst du die Karte anklicken, um ein Stück vom Zielbild freizugeben. Sende uns dein finales Bild als Screenshot an alike@hochbahn.de
+`Teste die angegebenen Szenarien im Zeitraum 6.-9.10. Nach jedem erfolgreichen Test musst du die Karte umdrehen (durch anklicken), um ein Stück vom Zielbild freizulegen. Ein Stop kann umgedreht werden, wenn deine Fahrt dort entweder beginnt oder endet. Sende uns dein finales Bild als Screenshot an alike@hochbahn.de
 
 Den Gewinner / die Gewinnerin erwarten ewiger Ruhm, Ehre und eine Überraschung.
 
@@ -34,22 +34,22 @@ Dein ALIKE-Projektteam 🚎`,
   // Karte 1 = Zeile 1 Spalte 1, Karte 2 = Zeile 1 Spalte 2, usw.).
   // Anzahl MUSS exakt cols * rows (aktuell 16) ergeben.
   testCases: [
-    "Abfahrt von Straßburger Str. 86",
-    "Abfahrt von Holzmühlenstr. 15",
+    "Straßburger Str. 86 besucht",
+    "Holzmühlenstr. 15 besucht",
     "Mache ein Selfie mit dir und dem Fahrzeug",
-    "Abfahrt von Holzmühlenstr. 78a",
-    "Abfahrt von Wagnerstraße 25",
+    "Holzmühlenstr. 78a besucht",
+    "Wagnerstraße 25 besucht",
     "Pooling mit 2 anderen Personen",
-    "Abfahrt von Wandsbeker Chaussee 153-151",
+    "Wandsbeker Chaussee 153-151 besucht",
     "Pooling mit 1 anderen Person",
-    "Abfahrt von Rüterstraße 95",
-    "Abfahrt von Friedrich-Ebert-Damm 19A",
-    "Fahrt neben einem Radfahrer",
-    "Abfahrt von Nordschleswiger Straße 78",
-    "Abfahrt von Walddörferstraße 34",
-    "Drei Linkskurven ohne Eingriff",
-    "Abfahrt von Wagnerstraße 41",
-    "Abfahrt von Wandsbeker Chaussee 95"
+    "Rüterstraße 95 besucht",
+    "Friedrich-Ebert-Damm 19A besucht",
+    "Erfolgreiches Überholen eines Lieferfahrzeugs",
+    "Nordschleswiger Straße 78 besucht",
+    "Walddörferstraße 34 besucht",
+    "Dreimal Linksabbiegen ohne Eingriff",
+    "Wagnerstraße 41 besucht",
+    "Wandsbeker Chaussee 95 besucht"
   ],
 
   // ---- Zielbild -----------------------------------------------------
