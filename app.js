@@ -15,7 +15,7 @@ const CONFIG = {
   // Regeltext (Spielregeln). \n erzeugt einen Absatz-/Zeilenumbruch.
   // Wird 1:1 (mit Zeilenumbrüchen) unter dem Titel angezeigt.
   rulesText:
-`Teste die angegebenen Szenarien im Zeitraum 6.-9.10. Nach jedem erfolgreichen Test musst du die Karte umdrehen (durch anklicken), um ein Stück vom Zielbild freizulegen. Ein Stop kann umgedreht werden, wenn deine Fahrt dort entweder beginnt oder endet. Sende uns dein finales Bild als Screenshot an alike@hochbahn.de
+`Teste die angegebenen Szenarien im Zeitraum 12.-16.10. Nach jedem erfolgreichen Test musst du die Karte umdrehen (durch anklicken), um ein Stück vom Zielbild freizulegen. Ein Stop kann umgedreht werden, wenn deine Fahrt dort entweder beginnt oder endet. Sende uns dein finales Bild als Screenshot an alike@hochbahn.de
 
 Den Gewinner / die Gewinnerin erwarten ewiger Ruhm, Ehre und eine Überraschung!
 
